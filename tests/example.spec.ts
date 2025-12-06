@@ -81,7 +81,7 @@ test('verify after item deletion only one item is visible', async ({ page }) => 
     await page.getByTestId('text-input').fill('buy bread');
     await page.getByTestId('text-input').press('Enter');
     await page.getByTestId('todo-item-label').filter({ hasText:'buy milk' }).hover();
-    await page.getByRole('button',{ name:'x' }).click();
+    await page.getByRole('button',{ name:'×' }).click();
     await expect(page.getByTestId('todo-item-label')).toHaveCount(1);
 });
 
